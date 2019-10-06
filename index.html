@@ -13,104 +13,120 @@
     <form id="new-item-form">
       <div id="form-wrapper">
 
-        <div class="form-item">
-          <label for="transactionType" class="primary">Transaction Type</label>
-          <select id="transactionType">
-            <option value="" disabled selected></option>
-            <option value="purchase">Purchase</option>
-            <option value="sale">Sale</option>
-          </select>
+        <div id="wrapper" class="form-box">
+
+          <div class="form-item">
+            <label for="transactionType" class="primary">Transaction Type</label>
+            <select id="transactionType">
+              <option value="" disabled selected></option>
+              <option value="purchase">Purchase</option>
+              <option value="sale">Sale</option>
+            </select>
+          </div>
+
         </div>
 
-        <div class="form-item">
-          <label for="name" class="primary">Name</label>
-          <input type="text" id="name" required/>
+        <div id="wrapper" class="form-box">
+
+          <div class="form-item">
+            <label for="name" class="primary">Name</label>
+            <input type="text" id="name" required/>
+          </div>
+
+          <div class="form-item">
+            <label for="coNo" class="primary">Allocated No (if any)</label>
+            <input type="text" id="coNo"/>
+          </div>
+
         </div>
 
-        <div class="form-item">
-          <label for="coNo" class="primary">Allocated No (if any)</label>
-          <input type="text" id="coNo"/>
+        <div id="wrapper" class="form-box">
+
+          <div class="form-item">
+            <label for="otherPartyName" class="primary">Name</label>
+            <input type="text" id="otherPartyName" required/>
+          </div>
+
+          <div class="form-item">
+            <label for="otherPartyCoNo" class="primary">Allocated No (if any)</label>
+            <input type="text" id="otherPartyCoNo"/>
+          </div>
+
         </div>
 
-        <div class="form-item">
-          <label for="otherPartyName" class="primary">Name</label>
-          <input type="text" id="otherPartyName" required/>
-        </div>
+        <div id="wrapper" class="form-box">
 
-        <div class="form-item">
-          <label for="otherPartyCoNo" class="primary">Allocated No (if any)</label>
-          <input type="text" id="otherPartyCoNo"/>
-        </div>
+          <div class="form-item">
+            <label for="county" class="primary">County</label>
+            <select id="county">
+              <option value="" disabled selected></option>
+              <option value="Renfrew">Renfrew</option>
+              <option value="Dumbarton">Dumbarton</option>
+              <option value="Lanark">Lanark</option>
+              <option value="Glasgow">Lanark</option>
+              <option value="Clackmannan">Clackmannan</option>
+              <option value="Stirling">Stirling</option>
+              <option value="West Lothian">West Lothian</option>
+              <option value="Fife">Fife</option>
+              <option value="Aberdeen">Aberdeen</option>
+              <option value="Kincardine">Kincardine</option>
+              <option value="Ayr">Ayr</option>
+              <option value="Dumfries">Dumfries</option>
+              <option value="Kirkcudbright">Kircudbright</option>
+              <option value="Wigtown">Wigtown</option>
+              <option value="Angus">Angus</option>
+              <option value="Kinross">Kinross</option>
+              <option value="Perth">Perth</option>
+              <option value="Berwick">Berwick</option>
+              <option value="East Lothian">East Lothian</option>
+              <option value="Peebles">Peebles</option>
+              <option value="Roxburgh">Roxburgh</option>
+              <option value="Selkirk">Selkirk</option>
+              <option value="Argyll">Argyll</option>
+              <option value="Bute">Bute</option>
+              <option value="Midlothian">Midlothian</option>
+              <option value="Inverness">Inverness</option>
+              <option value="Nairn">Nairn</option>
+              <option value="Banff">Banff</option>
+              <option value="Caithness">Caithness</option>
+              <option value="Moray">Moray</option>
+              <option value="Orkney & Zetland">Orkney & Zetland</option>
+              <option value="Ross & Cromarty">Ross & Cromarty</option>
+              <option value="Sutherland">Sutherland</option>
+              <option value="Seabed">Seabed</option>
+            </select>
+          </div>
 
-        <div class="form-item">
-          <label for="county" class="primary">County</label>
-          <select id="county">
-            <option value="" disabled selected></option>
-            <option value="Renfrew">Renfrew</option>
-            <option value="Dumbarton">Dumbarton</option>
-            <option value="Lanark">Lanark</option>
-            <option value="Glasgow">Lanark</option>
-            <option value="Clackmannan">Clackmannan</option>
-            <option value="Stirling">Stirling</option>
-            <option value="West Lothian">West Lothian</option>
-            <option value="Fife">Fife</option>
-            <option value="Aberdeen">Aberdeen</option>
-            <option value="Kincardine">Kincardine</option>
-            <option value="Ayr">Ayr</option>
-            <option value="Dumfries">Dumfries</option>
-            <option value="Kirkcudbright">Kircudbright</option>
-            <option value="Wigtown">Wigtown</option>
-            <option value="Angus">Angus</option>
-            <option value="Kinross">Kinross</option>
-            <option value="Perth">Perth</option>
-            <option value="Berwick">Berwick</option>
-            <option value="East Lothian">East Lothian</option>
-            <option value="Peebles">Peebles</option>
-            <option value="Roxburgh">Roxburgh</option>
-            <option value="Selkirk">Selkirk</option>
-            <option value="Argyll">Argyll</option>
-            <option value="Bute">Bute</option>
-            <option value="Midlothian">Midlothian</option>
-            <option value="Inverness">Inverness</option>
-            <option value="Nairn">Nairn</option>
-            <option value="Banff">Banff</option>
-            <option value="Caithness">Caithness</option>
-            <option value="Moray">Moray</option>
-            <option value="Orkney & Zetland">Orkney & Zetland</option>
-            <option value="Ross & Cromarty">Ross & Cromarty</option>
-            <option value="Sutherland">Sutherland</option>
-            <option value="Seabed">Seabed</option>
-          </select>
-        </div>
+          <div class="form-item">
+            <label for="title_no" class="primary">Title Number</label>
+            <input type="text" id="title_no" required/>
+          </div>
 
-        <div class="form-item">
-          <label for="title_no" class="primary">Title Number</label>
-          <input type="text" id="title_no" required/>
-        </div>
+          <div class="form-item">
+            <label for="property_name" class="primary">Property Name</label>
+            <input type="text" id="property_name" required/>
+          </div>
 
-        <div class="form-item">
-          <label for="property_name" class="primary">Property Name</label>
-          <input type="text" id="property_name" required/>
-        </div>
+          <div class="form-item">
+            <label for="property_no" class="primary">Property No</label>
+            <input type="text" id="property_no" required/>
+          </div>
 
-        <div class="form-item">
-          <label for="property_no" class="primary">Property No</label>
-          <input type="text" id="property_no" required/>
-        </div>
+          <div class="form-item">
+            <label for="street_name" class="primary">Street Name</label>
+            <input type="text" id="street_name" required/>
+          </div>
 
-        <div class="form-item">
-          <label for="street_name" class="primary">Street Name</label>
-          <input type="text" id="street_name" required/>
-        </div>
+          <div class="form-item">
+            <label for="town" class="primary">Town</label>
+            <input type="text" id="town" required/>
+          </div>
 
-        <div class="form-item">
-          <label for="town" class="primary">Town</label>
-          <input type="text" id="town" required/>
-        </div>
+          <div class="form-item">
+            <label for="postcode" class="primary">Postcode</label>
+            <input type="text" id="postcode" required/>
+          </div>
 
-        <div class="form-item">
-          <label for="postcode" class="primary">Postcode</label>
-          <input type="text" id="postcode" required/>
         </div>
 
       </div>

@@ -6,6 +6,21 @@ body {
   width: 100%;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.form-box {
+  margin: 0.5rem 0.5rem;
+  padding: 0.5rem 0.8rem;
+  border: 1px solid #20437c;
+  border-radius: 5%;
+  background: #ddeaff;
 }
 
 .form-item {
