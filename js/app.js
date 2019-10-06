@@ -25,6 +25,34 @@ document.addEventListener('DOMContentLoaded', () => {
     const listItem = document.createElement('li');
     listItem.classList.add('list-item');
 
+    const dispFrontPage1 = document.createElement('p');
+    dispFrontPage1.textContent = 'DISPOSITION';
+    listItem.appendChild(dispFrontPage1);
+
+    const dispFrontPage2 = document.createElement('p');
+    dispFrontPage2.textContent = 'by';
+    listItem.appendChild(dispFrontPage2);
+
+    const dispFrontPage3 = document.createElement('p');
+      if (form.transactionType.value === "sale") {
+        dispFrontPage3.textContent = `${form.name.value}`;
+      } else {
+        dispFrontPage3.textContent = `${form.otherPartyName.value}`;
+        }
+    listItem.appendChild(dispFrontPage3);
+
+    const dispFrontPage4 = document.createElement('p');
+    dispFrontPage4.textContent = 'in favour of';
+    listItem.appendChild(dispFrontPage4);
+
+    const dispFrontPage5 = document.createElement('p');
+      if (form.transactionType.value === "purchase") {
+        dispFrontPage5.textContent = `${form.name.value}`;
+      } else {
+        dispFrontPage5.textContent = `${form.otherPartyName.value}`;
+        }
+    listItem.appendChild(dispFrontPage5);
+
     const county = document.createElement('p');
     county.textContent = `${form.county.value}`;
     listItem.appendChild(county);
@@ -52,25 +80,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const postcode = document.createElement('p');
     postcode.textContent = `${form.postcode.value}`;
     listItem.appendChild(postcode);
-
-    // const dispFrontPage1 = document.createElement('p');
-    // dispFrontPage1.textContent = 'DISPOSITION';
-    // listItem.appendChild(dispFrontPage1);
-    //
-    // const dispFrontPage2 = document.createElement('p');
-    // dispFrontPage2.textContent = 'by';
-    // listItem.appendChild(dispFrontPage2);
-    //
-    // const dispFrontPage1 = document.createElement('p');
-    // dispFrontPage1.textContent = 'DISPOSITION';
-    // listItem.appendChild(dispFrontPage1);
-    //
-    // const dispFrontPage1 = document.createElement('p');
-    // dispFrontPage1.textContent = 'DISPOSITION';
-    // listItem.appendChild(dispFrontPage1);
-    // const dispFrontPage1 = document.createElement('p');
-    // dispFrontPage1.textContent = 'DISPOSITION';
-    // listItem.appendChild(dispFrontPage1);
 
     return listItem;
 

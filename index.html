@@ -7,9 +7,41 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
   </head>
   <body>
+
     <h1>Dynamic Disposition App</h1>
+
     <form id="new-item-form">
       <div id="form-wrapper">
+
+        <div class="form-item">
+          <label for="transactionType" class="primary">Transaction Type</label>
+          <select id="transactionType">
+            <option value="" disabled selected></option>
+            <option value="purchase">Purchase</option>
+            <option value="sale">Sale</option>
+          </select>
+        </div>
+
+        <div class="form-item">
+          <label for="name" class="primary">Name</label>
+          <input type="text" id="name" required/>
+        </div>
+
+        <div class="form-item">
+          <label for="coNo" class="primary">Allocated No (if any)</label>
+          <input type="text" id="coNo"/>
+        </div>
+
+        <div class="form-item">
+          <label for="otherPartyName" class="primary">Name</label>
+          <input type="text" id="otherPartyName" required/>
+        </div>
+
+        <div class="form-item">
+          <label for="otherPartyCoNo" class="primary">Allocated No (if any)</label>
+          <input type="text" id="otherPartyCoNo"/>
+        </div>
+
         <div class="form-item">
           <label for="county" class="primary">County</label>
           <select id="county">
@@ -53,7 +85,7 @@
 
         <div class="form-item">
           <label for="title_no" class="primary">Title Number</label>
-          <span id="select-result">   <input type="text" id="title_no" required/></span>
+          <input type="text" id="title_no" required/>
         </div>
 
         <div class="form-item">
