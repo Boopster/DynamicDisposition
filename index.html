@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dynamic Disposition App</title>
+    <script src="js/app.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+  </head>
+  <body>
+    <h1>Dynamic Disposition App</h1>
+    <form id="new-item-form">
+      <div id="form-wrapper">
+        <div class="form-item">
+          <label for="county">County</label>
+          <select id="county">
+            <option value="" disabled selected></option>
+            <option value="Renfrew">Renfrew</option>
+            <option value="Dumbarton">Dumbarton</option>
+            <option value="Lanark">Lanark</option>
+            <option value="Glasgow">Lanark</option>
+            <option value="Clackmannan">Clackmannan</option>
+            <option value="Stirling">Stirling</option>
+            <option value="West Lothian">West Lothian</option>
+            <option value="Fife">Fife</option>
+            <option value="Aberdeen">Aberdeen</option>
+            <option value="Kincardine">Kincardine</option>
+            <option value="Ayr">Ayr</option>
+            <option value="Dumfries">Dumfries</option>
+            <option value="Kirkcudbright">Kircudbright</option>
+            <option value="Wigtown">Wigtown</option>
+            <option value="Angus">Angus</option>
+            <option value="Kinross">Kinross</option>
+            <option value="Perth">Perth</option>
+            <option value="Berwick">Berwick</option>
+            <option value="East Lothian">East Lothian</option>
+            <option value="Peebles">Peebles</option>
+            <option value="Roxburgh">Roxburgh</option>
+            <option value="Selkirk">Selkirk</option>
+            <option value="Argyll">Argyll</option>
+            <option value="Bute">Bute</option>
+            <option value="Midlothian">Midlothian</option>
+            <option value="Inverness">Inverness</option>
+            <option value="Nairn">Nairn</option>
+            <option value="Banff">Banff</option>
+            <option value="Caithness">Caithness</option>
+            <option value="Moray">Moray</option>
+            <option value="Orkney & Zetland">Orkney & Zetland</option>
+            <option value="Ross & Cromarty">Ross & Cromarty</option>
+            <option value="Sutherland">Sutherland</option>
+            <option value="Seabed">Seabed</option>
+          </select>
+        </div>
+
+        <div class="form-item">
+          <label for="title_no">Title Number:</label>
+          <span id="select-result">   <input type="text" id="title_no" required/></span>
+        </div>
+
+        <div class="form-item">
+          <label for="property_name">Property Name</label>
+          <input type="text" id="property_name" required/>
+        </div>
+
+        <div class="form-item">
+          <label for="property_no">Property No</label>
+          <input type="text" id="property_no" required/>
+        </div>
+
+        <div class="form-item">
+          <label for="street_name">Street Name</label>
+          <input type="text" id="street_name" required/>
+        </div>
+
+        <div class="form-item">
+          <label for="town">Town</label>
+          <input type="text" id="town" required/>
+        </div>
+
+        <div class="form-item">
+          <label for="postcode">Postcode</label>
+          <input type="text" id="postcode" required/>
+        </div>
+
+      </div>
+      <input type="submit" value="Save"/>
+    </form>
+
+    <input id="deleteBtn" type="submit" value ="Delete All"/>
+
+    <h1>Disposition</h1>
+    <div id="disposition"></div>
+  </body>
+</html>
