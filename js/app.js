@@ -1,61 +1,84 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  console.log('Javascript loaded');
-
-  const handleSubmitForm = function(event) {
-
-    event.preventDefault();
-
-    const county = document.createElement('li');
-    county.textContent = `${this.county.value}`;
-
-    const title_no = document.createElement('li');
-    title_no.textContent = `${this.title_no.value}`;
-
-
-    const property_name = document.createElement('li');
-    property_name.textContent = `${this.property_name.value}`;
-
-
-    const property_no = document.createElement('li');
-    property_no.textContent = `${this.property_no.value}`;
-
-
-    const street_name = document.createElement('li');
-    street_name.textContent = `${this.street_name.value}`;
-
-
-    const town = document.createElement('li');
-    town.textContent = `${this.town.value}`;
-
-
-    const postcode = document.createElement('li');
-    postcode.textContent = `${this.postcode.value}`;
-
-
-
-  const list = document.querySelector('#disposition');
-  list.appendChild(county);
-  list.appendChild(title_no);
-  list.appendChild(property_name);
-  list.appendChild(property_no);
-  list.appendChild(street_name);
-  list.appendChild(town);
-  list.appendChild(postcode);
-  document.querySelector('#new-item-form').reset();
-
-};
-
-const handleDeleteDisposition = function(event) {
-
-  const listItem = document.querySelector('#disposition');
-  listItem.remove();
-};
-
-  const form = document.querySelector('#new-item-form');
-  form.addEventListener('submit',handleSubmitForm);
+  const newItemForm = document.querySelector('#new-item-form');
+  newItemForm.addEventListener('submit',handleNewItemSubmitForm);
 
   const deleteBtn = document.querySelector('#deleteBtn');
   deleteBtn.addEventListener('click',handleDeleteDisposition);
 
-});
+  });
+
+  const handleNewItemSubmitForm = function(event) {
+
+    event.preventDefault();
+
+    const listItem = createDisposition(event.target);
+    const list = document.querySelector('#disposition');
+    list.appendChild(listItem);
+
+    event.target.reset();
+
+  };
+
+  const createDisposition = function (form) {
+
+    const listItem = document.createElement('li');
+    listItem.classList.add('list-item');
+
+    const county = document.createElement('p');
+    county.textContent = `${form.county.value}`;
+    listItem.appendChild(county);
+
+    const title_no = document.createElement('p');
+    title_no.textContent = `${form.title_no.value}`;
+    listItem.appendChild(title_no);
+
+    const property_name = document.createElement('p');
+    property_name.textContent = `${form.property_name.value}`;
+    listItem.appendChild(property_name);
+
+    const property_no = document.createElement('p');
+    property_no.textContent = `${form.property_no.value}`;
+    listItem.appendChild(property_no);
+
+    const street_name = document.createElement('p');
+    street_name.textContent = `${form.street_name.value}`;
+    listItem.appendChild(street_name);
+
+    const town = document.createElement('p');
+    town.textContent = `${form.town.value}`;
+    listItem.appendChild(town);
+
+    const postcode = document.createElement('p');
+    postcode.textContent = `${form.postcode.value}`;
+    listItem.appendChild(postcode);
+
+    // const dispFrontPage1 = document.createElement('p');
+    // dispFrontPage1.textContent = 'DISPOSITION';
+    // listItem.appendChild(dispFrontPage1);
+    //
+    // const dispFrontPage2 = document.createElement('p');
+    // dispFrontPage2.textContent = 'by';
+    // listItem.appendChild(dispFrontPage2);
+    //
+    // const dispFrontPage1 = document.createElement('p');
+    // dispFrontPage1.textContent = 'DISPOSITION';
+    // listItem.appendChild(dispFrontPage1);
+    //
+    // const dispFrontPage1 = document.createElement('p');
+    // dispFrontPage1.textContent = 'DISPOSITION';
+    // listItem.appendChild(dispFrontPage1);
+    // const dispFrontPage1 = document.createElement('p');
+    // dispFrontPage1.textContent = 'DISPOSITION';
+    // listItem.appendChild(dispFrontPage1);
+
+    return listItem;
+
+  };
+
+  const handleDeleteDisposition = function(event) {
+
+  const list = document.querySelector('#disposition');
+  list.remove();
+
+};
