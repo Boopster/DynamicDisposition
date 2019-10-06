@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (form.transactionType.value === "sale") {
         dispFrontPage3.textContent = `${form.name.value}`;
       } else {
-        dispFrontPage3.textContent = `${form.otherPartyName.value}`;
+        dispFrontPage3.textContent = `${form.other_party_name.value}`;
         }
     listItem.appendChild(dispFrontPage3);
 
@@ -49,9 +49,53 @@ document.addEventListener('DOMContentLoaded', () => {
       if (form.transactionType.value === "purchase") {
         dispFrontPage5.textContent = `${form.name.value}`;
       } else {
-        dispFrontPage5.textContent = `${form.otherPartyName.value}`;
+        dispFrontPage5.textContent = `${form.other_party_name.value}`;
         }
     listItem.appendChild(dispFrontPage5);
+
+    const dispFrontPage6 = document.createElement('p');
+    dispFrontPage6.textContent = `Property: ${form.property_name.value}, ${form.property_no.value} ${form.street_name.value}, ${form.town.value} ${form.postcode.value}`;
+    listItem.appendChild(dispFrontPage6);
+
+    const dispMainBodyHeading = document.createElement('p');
+    dispMainBodyHeading.textContent = 'DISPOSITION';
+    listItem.appendChild(dispMainBodyHeading);
+
+    const dispMainBodyDefinitions1 = document.createElement('p');
+    dispMainBodyDefinitions1.textContent = '1.  Definitions';
+    listItem.appendChild(dispMainBodyDefinitions1);
+
+    const dispMainBodyDefinitions2 = document.createElement('p');
+    dispMainBodyDefinitions2.textContent = 'In this disposition:';
+    listItem.appendChild(dispMainBodyDefinitions2);
+
+    const dispMainBodyDefinitions3 = document.createElement('p');
+    dispMainBodyDefinitions3.textContent = '"Date of Entry" means [TBC];';
+    listItem.appendChild(dispMainBodyDefinitions3);
+
+    const dispMainBodyDefinitions4 = document.createElement('p');
+    dispMainBodyDefinitions4.textContent = '"Price" means [TBC]POUNDS (£[TBC] Sterling [on which sum no Value Added Tax is payable][exclusive of Value Added Tax which will be payable in addition]);';
+    listItem.appendChild(dispMainBodyDefinitions4);
+
+    const dispMainBodyDefinitions5 = document.createElement('p');
+    dispMainBodyDefinitions5.textContent = `"Property" means ALL and WHOLE the property known as ${form.property_name.value}, ${form.property_no.value} ${form.street_name.value}, ${form.town.value} ${form.postcode.value} being the whole subjects registered in the Land Register of Scotland under Title Number ${form.title_no.value}; TOGETHER WITH (One) the parts, privileges and pertinents; and (Two) the Seller's whole right, title and interest present and future in and to the property disponed;`;
+    listItem.appendChild(dispMainBodyDefinitions5);
+
+    const dispMainBodyDefinitions6 = document.createElement('p');
+      if (form.transactionType.value === "purchase") {
+        dispMainBodyDefinitions6.textContent = `"Purchaser" means ${form.name.value}, incorporated under the Companies Acts (Registered Number: ${form.co_no.value}) and having its Registered Office at [TBC];`;
+      } else {
+        dispMainBodyDefinitions6.textContent = `"Purchaser" means ${form.other_party_name.value}, incorporated under the Companies Acts (Registered Number: ${form.other_party_co_no.value}) and having its Registered Office at [TBC];`;
+      }
+    listItem.appendChild(dispMainBodyDefinitions6);
+
+    const dispMainBodyDefinitions7 = document.createElement('p');
+      if (form.transactionType.value === "sale") {
+        dispMainBodyDefinitions7.textContent = `"Seller" means ${form.name.value}, incorporated under the Companies Acts (Registered Number: ${form.co_no.value}) and having its Registered Office at [TBC];`;
+      } else {
+        dispMainBodyDefinitions7.textContent = `"Seller" means ${form.other_party_name.value}, incorporated under the Companies Acts (Registered Number: ${form.other_party_co_no.value}) and having its Registered Office at [TBC];`;
+      }
+    listItem.appendChild(dispMainBodyDefinitions7);
 
     const county = document.createElement('p');
     county.textContent = `${form.county.value}`;
