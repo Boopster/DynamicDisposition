@@ -2,6 +2,10 @@ body {
   font-family: Helvetica;
 }
 
+h3 {
+  text-align: center;
+}
+
 #form-wrapper {
   width: 100%;
   display: flex;
@@ -13,7 +17,12 @@ body {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  list-style-type: none;
+  width: 20%;
+  /* list-style-type: none; */
+}
+
+.none {
+  list-style: none;
 }
 
 .form-box {
@@ -28,14 +37,23 @@ body {
   margin-right: 1.8rem;
 }
 
-label.primary {
-  display: block;
-  margin: 0.4em 0;
+input[type="text"], input[type="number"], input[type="date"], select{
+  margin: 0 0 1em 0;
+  width: 100%;
 }
 
-label::after {
-  content: ":";
+input[type="radio"] {
+  margin: 1em;
 }
+
+label.primary {
+  display: block;
+  margin: 1em 0 0 0;
+}
+
+/* label::after {
+  content: ":";
+} */
 
 button, input[type="submit"] {
   margin-top: 1rem;
@@ -44,7 +62,7 @@ button, input[type="submit"] {
 #disposition {
   display: flex;
   flex-wrap: wrap;
-  list-style-type: none;
+  /* list-style-type: none; */
 }
 
 .list-item {
@@ -53,4 +71,13 @@ button, input[type="submit"] {
   border: 1px solid #20437c;
   /* border-radius: 5%; */
   background: #ddeaff;
+}
+
+li {
+  margin: 0.5em;
+  display: block;
+}
+
+input, select {
+  height: 2em;
 }
