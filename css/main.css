@@ -2,6 +2,12 @@ body {
   font-family: Helvetica;
 }
 
+h1 {
+  color: #000066;
+  font-weight: bold;
+  text-align: center;
+}
+
 h3 {
   text-align: center;
 }
@@ -10,6 +16,7 @@ h3 {
   width: 100%;
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 
